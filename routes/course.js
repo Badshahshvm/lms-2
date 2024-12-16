@@ -2,7 +2,7 @@ const express = require("express");
 const checkAuth = require("../middlewares/checkAuth");
 const { addCourse, getAllCourse, getCreatorCourse, updateCourse, deleteCourse, addLecture, getCourseLectures, updateLecture, deleteLecture, isPublishCourse, getCourseById, getSearchCourse, serachCourse } = require("../controller/course");
 const router = express.Router()
-router.get("/", checkAuth, serachCourse)
+router.get("/",  serachCourse)
 router.post("/new", checkAuth, addCourse)
 router.get("/all", getAllCourse)
 router.get("/admin", checkAuth, getCreatorCourse)
